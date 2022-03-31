@@ -1,0 +1,36 @@
+Multiple History Searching
+chrome.history.search({ text: '', maxResults: 100 }, function (data) {
+         data.forEach(function (page) {
+         console.log(page);
+         console.log(data.length)
+     });
+});
+
+
+Multiple Browsing data deleting
+chrome.browsingData.remove({ since: 0 }, {
+                "appcache": true,
+                "cache": true,
+                "cacheStorage": true,
+                "cookies": true,
+                "downloads": true,
+                "fileSystems": true,
+                "formData": false,
+                "history": true,
+                "indexedDB": false,
+                "localStorage": true,
+                "passwords": false,
+                "serviceWorkers": false,
+                "webSQL": false
+            }, callback);
+
+
+All history search delete
+chrome.history.deleteAll(() => {
+                 console.log('History deleted :)');
+            });
+
+
+
+TODO
+Add a GUI

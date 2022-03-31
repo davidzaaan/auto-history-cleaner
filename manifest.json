@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "Auto history cleaner",
+    "version": "0.1.0",
+    "description": "Auto clean your history whenever you close Chrome",
+    "author": "davidzaaan",
+    "browser_action": {
+        "default_icon": {
+            "16": "delete.png"
+        }
+    },
+    "icons": {
+        "16": "delete.png",
+        "48": "delete_48.png",
+        "128": "delete_128.png"
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "permissions": [
+        "history",
+        "browsingData"
+    ]
+}
